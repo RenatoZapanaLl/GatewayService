@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: GatewayService
+  cloud:
+    config:
+      uri: http://localhost:8090
+      username: nttdata
+      password: ntt4dt4
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8091/eureka/
+
+
+
+
