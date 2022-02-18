@@ -6,7 +6,15 @@ spring:
       uri: http://localhost:8090
       username: nttdata
       password: ntt4dt4
-
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+       - id: Example-Service
+         uri: lb://ExampleService
+         predicates:
+           - Path=/ExampleService/**
 eureka:
   client:
     serviceUrl:
